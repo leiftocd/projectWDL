@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./scss/newpage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="logo"><a href="index.html">
+            <img src="./assets/Image/HomePage/logo-new.svg" alt=""></a>
+        </div>
+        <nav class="nav-pc">
+            <div  class="btn-close">
+                <button id="btnClose">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </button>
+            </div>
+            <ul class="menu">
+                <li><a href="/index.html" class="hover-menu">Trang chủ</a></li>
+                <li><a href="#" class="hover-menu">Giới thiệu <img src="./assets/Image/HomePage/Arrow-down.svg" alt=""></a>
+                    <ul class="sub-menu">
+                        <li ><a href="./gioithieu.html?tab=tab0">Tổng quan</a></li>
+                        <li><a href="./gioithieu.html?tab=tab1">Phương pháp giáo dục STEAM</a></li>
+                        <li><a href="./gioithieu.html?tab=tab2">Nhân sự</a></li>
+                        <li><a href="./gioithieu.html?tab=tab3">Thực đơn</a></li>     
+                    </ul>
+                </li>
+                <li><a href="#" class="hover-menu">Tuyển sinh <img src="./assets/Image/HomePage/Arrow-down.svg" alt=""></a>
+                    <ul class="sub-menu admiss">
+                        <li ><a href="./admission.html?tab=tab0">Các lớp học</a></li>
+                        <li><a href="./admission.html?tab=tab1">Học phí</a></li>
+                        <li><a href="./admission.html?tab=tab2">Tin tức tuyển sinh</a></li>  
+                    </ul>
+                </li>
+                <li><a href="#" class="hover-menu menuActive">Tin tức <img src="./assets/Image/HomePage/Arrow-down.svg" alt=""></a>
+                    <ul class="sub-menu news">
+                        <li><a href="./newpage.html?tab=tab1">Chương trình - Sự kiện</a></li>
+                        <li><a href="./newpage.html?tab=tab2">Hoạt động giáo dục</a></li>
+                        <li><a href="./newpage.html?tab=tab3">Góc phụ huynh</a></li> 
+                    </ul>
+                </li>
+                <li><a href="./gallery.html" class="hover-menu">Thư viện ảnh</a></li>
+
+            </ul>
+            <div class="support">
+                <button class="support-btn" id="support-btn">
+                    <img src="./assets/Image/support-1.svg" alt="">
+                    Đăng ký tư vấn</button>
+            </div>
+        </nav>
+        <button class="menu-btn" id="btnOpen" style="background-color: transparent; border: none;">
+            <img src="./assets/Image/HomePage/btn__menu.svg" alt="">
+        </button>
+    </header>
+    <div class="support-popup" id="support-popup">
+        <div class="support-popup__wrapper">
+            <div class="close-btn">
+                <svg onclick="closePopup()" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </div>
+            <div class="popup-img">
+                <img src="./assets/Image/HomePage/registration.png" alt="">
+            </div>
+            <div class="popup-form">
+                <h2>ĐĂNG KÝ NHẬN
+                    <br>
+                    TƯ VẤN TUYỂN SINH</h2>
+                <form class="form" action="">
+                    <div class="form-input">
+                        <input type="text">
+                        <span for="" class="placeholder">Họ và tên phụ huynh <span>*</span></span>
+                    </div>
+                    <div class="form-input " >
+                        <input type="number">
+                        <span for="" class="placeholder">Số điện thoại liên hệ <span>*</span></span>
+                    </div>
+                    <div class="form-input">
+                        <input type="text">
+                        <span for="" class="placeholder">Khối lớp muốn đăng ký</span>
+                    </div>
+                    <button class="form-btn" id="form-btn">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <section id="newpage" class="newpage">
+        <aside class="aside">
+            <h3>Tin tức</h3>
+            <div class="aside-menu" data-tabs="tab0">
+                <div class="arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none" class="img-default">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25734 11.6627L4.13691 4.76268C3.90488 4.24702 4.18119 3.65966 4.75405 3.45081C5.11035 3.32092 5.49806 3.36717 5.79567 3.54536L17.9244 10.8236C18.4392 11.1326 18.5784 11.7587 18.2351 12.2222C18.1463 12.3421 18.0339 12.4392 17.9071 12.5122L5.79567 19.7801C5.28086 20.089 4.58521 19.9638 4.24196 19.5004C4.01707 19.1967 3.9993 18.8232 4.15862 18.5149L7.25734 11.6627Z" stroke="#646363" stroke-width="0.673708" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none" class="img-active active">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25535 4.83747L1.75152 1.51214C1.6397 1.26363 1.77286 0.980567 2.04894 0.879918C2.22065 0.817318 2.4075 0.839609 2.55092 0.925485L8.3961 4.43307C8.64419 4.58198 8.71125 4.88374 8.54583 5.10707C8.50304 5.16486 8.44886 5.21168 8.38777 5.24686L2.55092 8.74947C2.30282 8.89834 1.96757 8.83798 1.80215 8.61465C1.69377 8.46832 1.68521 8.28832 1.76198 8.13971L3.25535 4.83747Z" fill="#FBBD13" stroke="#FBBD13" stroke-width="0.324679" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Tất cả</span>
+            </div>
+            <div class="aside-menu" data-tabs="tab1">
+                <div class="arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none" class="img-default">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25734 11.6627L4.13691 4.76268C3.90488 4.24702 4.18119 3.65966 4.75405 3.45081C5.11035 3.32092 5.49806 3.36717 5.79567 3.54536L17.9244 10.8236C18.4392 11.1326 18.5784 11.7587 18.2351 12.2222C18.1463 12.3421 18.0339 12.4392 17.9071 12.5122L5.79567 19.7801C5.28086 20.089 4.58521 19.9638 4.24196 19.5004C4.01707 19.1967 3.9993 18.8232 4.15862 18.5149L7.25734 11.6627Z" stroke="#646363" stroke-width="0.673708" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none" class="img-active">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25535 4.83747L1.75152 1.51214C1.6397 1.26363 1.77286 0.980567 2.04894 0.879918C2.22065 0.817318 2.4075 0.839609 2.55092 0.925485L8.3961 4.43307C8.64419 4.58198 8.71125 4.88374 8.54583 5.10707C8.50304 5.16486 8.44886 5.21168 8.38777 5.24686L2.55092 8.74947C2.30282 8.89834 1.96757 8.83798 1.80215 8.61465C1.69377 8.46832 1.68521 8.28832 1.76198 8.13971L3.25535 4.83747Z" fill="#FBBD13" stroke="#FBBD13" stroke-width="0.324679" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Chương trình - Sự kiện</span>
+            </div>
+            <div class="aside-menu" data-tabs="tab2">
+                <div class="arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none" class="img-default">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25734 11.6627L4.13691 4.76268C3.90488 4.24702 4.18119 3.65966 4.75405 3.45081C5.11035 3.32092 5.49806 3.36717 5.79567 3.54536L17.9244 10.8236C18.4392 11.1326 18.5784 11.7587 18.2351 12.2222C18.1463 12.3421 18.0339 12.4392 17.9071 12.5122L5.79567 19.7801C5.28086 20.089 4.58521 19.9638 4.24196 19.5004C4.01707 19.1967 3.9993 18.8232 4.15862 18.5149L7.25734 11.6627Z" stroke="#646363" stroke-width="0.673708" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none" class="img-active">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25535 4.83747L1.75152 1.51214C1.6397 1.26363 1.77286 0.980567 2.04894 0.879918C2.22065 0.817318 2.4075 0.839609 2.55092 0.925485L8.3961 4.43307C8.64419 4.58198 8.71125 4.88374 8.54583 5.10707C8.50304 5.16486 8.44886 5.21168 8.38777 5.24686L2.55092 8.74947C2.30282 8.89834 1.96757 8.83798 1.80215 8.61465C1.69377 8.46832 1.68521 8.28832 1.76198 8.13971L3.25535 4.83747Z" fill="#FBBD13" stroke="#FBBD13" stroke-width="0.324679" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Hoạt động giáo dục</span>
+            </div>
+            <div class="aside-menu" data-tabs="tab3">
+                <div class="arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none" class="img-default">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25734 11.6627L4.13691 4.76268C3.90488 4.24702 4.18119 3.65966 4.75405 3.45081C5.11035 3.32092 5.49806 3.36717 5.79567 3.54536L17.9244 10.8236C18.4392 11.1326 18.5784 11.7587 18.2351 12.2222C18.1463 12.3421 18.0339 12.4392 17.9071 12.5122L5.79567 19.7801C5.28086 20.089 4.58521 19.9638 4.24196 19.5004C4.01707 19.1967 3.9993 18.8232 4.15862 18.5149L7.25734 11.6627Z" stroke="#646363" stroke-width="0.673708" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none" class="img-active">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25535 4.83747L1.75152 1.51214C1.6397 1.26363 1.77286 0.980567 2.04894 0.879918C2.22065 0.817318 2.4075 0.839609 2.55092 0.925485L8.3961 4.43307C8.64419 4.58198 8.71125 4.88374 8.54583 5.10707C8.50304 5.16486 8.44886 5.21168 8.38777 5.24686L2.55092 8.74947C2.30282 8.89834 1.96757 8.83798 1.80215 8.61465C1.69377 8.46832 1.68521 8.28832 1.76198 8.13971L3.25535 4.83747Z" fill="#FBBD13" stroke="#FBBD13" stroke-width="0.324679" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Góc phụ huynh</span>
+            </div>
+        </aside>
+        <div class="content-mb">
+            <div class="content-img">
+                <img src="./assets/Image/NewsPage/img1.jpg" alt="">
+            </div>
+            <div class="tab">
+                <span data-tabs="tab2">Hoạt động giáo dục</span>
+            </div>
+            <span class="content-date">Tuesday, 07/11/2023 - 18:02</span>
+            <div class="content-infor">
+
+                <h4>Chuỗi Hoạt Động Thí Nghiệm STEAM Tại Trường Mầm Non Wonderland</h4>
+                <p>Những kiến thức khoa học là một phần không thể thiếu trong sự phát triển của xã hội hiện nay. Do đó, được tiếp xúc và thực hành các thí nghiệm khoa học từ sớm mang lại nhiều cơ hội khám phá thế giới cho các em bé tại Trường mầm non Wonderland.</p>
+            </div>
+            <button id="readmore">
+                Đọc thêm
+                <div class="readmore-img">
+                    <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                </div>
+            </button>
+        </div>
+        <div class="new-card">
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img1.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab2">Hoạt động giáo dục</span>
+                    </div>
+                    <span class="box-date">Tuesday, 07/11/2023 - 18:02</span>
+                    <div class="box-infor">
+                        <h4>Chuỗi Hoạt Động Thí Nghiệm STEAM Tại Trường Mầm Non Wonderland</h4>
+                        <p>Những kiến thức khoa học là một phần không thể thiếu trong sự phát triển của xã hội hiện nay. Do đó, được tiếp xúc và thực hành các thí nghiệm khoa học từ sớm mang lại nhiều cơ hội khám phá thế giới cho các em bé tại Trường mầm non Wonderland.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img1.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab3">Góc phụ huynh</span>
+                    </div>
+                    <span class="box-date">Tuesday, 07/11/2023 - 17:06</span>
+                    <div class="box-infor">
+                        <h4>Tầm Quan Trọng Của Việc Giáo Dục Nhân Cách Cho Trẻ Mầm Non</h4>
+                        <p>'Tiên học lễ, hậu học văn' - Việc giáo dục nhân cách cho trẻ mầm non luôn là vấn đề mà các bậc phụ huynh cũng như các thầy cô giáo đặc biệt quan tâm. Tuy nhiên, tại sao phải cần quan tâm nhân cách từ sớm và nhân cách được ươm dưỡng như thế nào tại trường mầm non Wonderland? Mời Quý phụ huynh cùng theo dõi bài viết dưới đây.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img3.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab2">Chương trình - Sự kiện</span>
+                        <span data-tabs="tab3">Góc phụ huynh</span>
+                    </div>
+                    <span class="box-date">Monday, 06/11/2023 - 10:07</span>
+                    <div class="box-infor">
+                        <h4>Hoạt Động Rèn Luyện Kỹ Năng Sống Tự Lập Cho Trẻ Mầm Non (P2)</h4>
+                        <p>Nhằm xây dựng tính tự lập cho trẻ từ nhỏ, Wonderland School mang đến cho các con những tiết học kỹ năng từ những điều nhỏ nhặt nhất trong cuộc sống, bao gồm kỹ năng cầm đũa gắp thức ăn, kỹ năng tưới cây xanh,….</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img4.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab2">Hoạt động giáo dục</span>
+                        <span data-tabs="tab3">Góc phụ huynh</span>
+                    </div>
+                    <span class="box-date">Monday, 06/11/2023 - 09:11</span>
+                    <div class="box-infor">
+                        <h4>Hình Thành Trong Con Tính Kỷ Luật Cùng Wonderland School</h4>
+                        <p>Từ lâu, tính kỷ luật đã và đang trở thành chuẩn mực vàng để giáo dục trẻ, đặc biệt ngay từ lứa tuổi mầm non.Trẻ được kỷ luật tích cực sớm sẽ học được rất nhiều thứ, có thể tự lập sớm và ngoan ngoãn hơn những bạn nhỏ không được rèn kỷ luật.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img5.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab1">Chương trình - Sự kiện</span>
+                    </div>
+                    <span class="box-date">Saturday, 04/11/2023 - 18:00</span>
+                    <div class="box-infor">
+                        <h4>Lễ Hội Trung Thu tại Trường mầm non Wonderland: Rực Rỡ 'Ánh Trăng Đêm Rằm'</h4>
+                        <p>Cô và trò trường mầm non Wonderland cùng nhau tham gia ngày hội 'Ánh Trăng Đêm Rằm' đầy sôi động với các tiết mục văn nghệ vui tươi, cùng nhiều hoạt động vui chơi giải trí.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img6.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab2">Hoạt động giáo dục</span>
+                    </div>
+                    <span class="box-date">Saturday, 04/11/2023 - 18:00</span>
+                    <div class="box-infor">
+                        <h4>Khi Trẻ Hóa Thân Thành Vua Đầu Bếp Tại Trường Mầm Non Wonderland</h4>
+                        <p>Học nấu ăn giúp cho trẻ học cách sử dụng các đồ dùng nhà bếp an toàn, đồng thời có cơ hội khám phá năng khiếu bản thân của mình. Hiểu được lợi ích tuyệt vời của việc học nấu ăn, trường mầm non Wonderland đã lồng ghép vào các tiết học của trẻ những hoạt động nấu ăn, pha chế…</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img7.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab2">Hoạt động giáo dục</span>
+                        <span data-tabs="tab3">Góc phụ huynh</span>
+                    </div>
+                    <span class="box-date">Saturday, 04/11/2023 - 18:03</span>
+                    <div class="box-infor">
+                        <h4>Hoạt Động Rèn Luyện Kỹ Năng Sống Tự Lập Cho Trẻ Mầm Non</h4>
+                        <p>Việc sớm rèn luyện kỹ năng sống tự lập cho trẻ đã trở thành một trong những bước chuẩn bị quan trọng để con tự tin hòa nhập với cộng đồng khi trưởng thành. Hãy cùng xem các bạn nhỏ tại trường mầm non Wonderland được rèn luyện kỹ năng sống tự lập như thế nào nhé!</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img8.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab1">Chương trình - Sự kiện</span>
+                    </div>
+                    <span class="box-date">Saturday, 04/11/2023 - 18:02</span>
+                    <div class="box-infor">
+                        <h4>Hội thảo Cùng Chuyên Gia STEAM Tại Trường Mầm Non Wonderland</h4>
+                        <p>Trường mầm non Wonderland phối hợp cùng các chuyên gia giáo dục để tổ chức Hội thảo về phương pháp STEAM với chủ đề “Giáo dục STEAM - cánh cửa bước vào tương lai”.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img9.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab1">Chương trình - Sự kiện</span>
+                        <span data-tabs="tab2">Hoạt động giáo dục</span>
+                    </div>
+                    <span class="box-date">Saturday, 04/11/2023 - 18:01</span>
+                    <div class="box-infor">
+                        <h4>Độc Đáo Triển Lãm Động Vật Tại Trường Mầm Non Wonderland</h4>
+                        <p>Trường mầm non Wonderland tổ chức thành công triển lãm thế giới động vật với chủ đề 'Wonderland Zoo'. Triển lãm là sự kiện trưng bày sản phẩm của trẻ trong quá trình học dự án STEAM: “Tìm hiểu các loại động vật”.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img10.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab1">Chương trình - Sự kiện</span>
+                    </div>
+                    <span class="box-date">Saturday, 04/11/2023 - 18:00</span>
+                    <div class="box-infor">
+                        <h4>WonderKids Hào Hứng Đón Lễ Hội Nước</h4>
+                        <p>Trong không khí sôi động của ngày hè, các bạn nhỏ của trường mầm non Wonderland đã có dịp được tham gia 'Lễ hội nước' cực kỳ náo nhiệt ngay tại sân trường.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img11.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab3">Góc phụ huynh</span>
+                    </div>
+                    <span class="box-date">Monday, 30/10/2023 - 09:55</span>
+                    <div class="box-infor">
+                        <h4>Từ 0 Đến 6 Tuổi - Phát Triển Nhân Cách Của Trẻ Trong Giai Đoạn Vàng</h4>
+                        <p>Ngay từ bậc học mầm non, phụ huynh nên xây dựng và lựa chọn môi trường giáo dục một cách đúng đắn về nhân cách của trẻ.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img12.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab1">Chương trình - Sự kiện</span>
+                    </div>
+                    <span class="box-date">Saturday, 04/11/2023 - 18:03</span>
+                    <div class="box-infor">
+                        <h4>Wonderland School Đón Đoàn Tập Huấn Của Bộ Giáo Dục Và Đào Tạo</h4>
+                        <p>Wonderland School rất vinh dự khi liên tiếp được Sở Giáo dục & Đào tạo Thành phố Đà Nẵng lựa chọn làm địa điểm đón các học viên Cán bộ quản lý và Giáo viên cốt cán mầm non của Bộ Giáo dục và Đào tạo đến tập huấn và tham quan.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img13.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab2">Hoạt động giáo dục</span>
+                    </div>
+                    <span class="box-date">Monday, 30/10/2023 - 10:19</span>
+                    <div class="box-infor">
+                        <h4>Các Hoạt Động Năng Khiếu Tại Trường Mầm non Wonderland</h4>
+                        <p>Các lớp học năng khiếu tại Trường mầm non Wonderland được nhà trường đặc biệt quan tâm xây dựng với đa dạng bộ môn như: Tiếng anh nâng cao, Aerobic, Đàn organ, Võ Karate-do, Yoga.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img14.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab1">Chương trình - Sự kiện</span>
+                        <span data-tabs="tab2">Hoạt động giáo dục</span>
+                    </div>
+                    <span class="box-date">Monday, 30/10/2023 - 10:01</span>
+                    <div class="box-infor">
+                        <h4>Hành Trình Tham Quan Dã Ngoại Tại Vườn Rau Túy Loan Cùng Wonderland School</h4>
+                        <p>Chuyến tham quan của các bé Wonderland School tại Làng rau Túy Loan - nơi trồng rau sạch theo phương pháp công nghệ cao</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="new-card__box">
+                <div class="box-img">
+                    <img src="./assets/Image/NewsPage/img15.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <div class="tab">
+                        <span data-tabs="tab1">Chương trình - Sự kiện</span>
+                    </div>
+                    <span class="box-date">Monday, 30/10/2023 - 10:18</span>
+                    <div class="box-infor">
+                        <h4>Khám Phá Ngày Hội Khoa Học Tại Trường Mầm Non Wonderland</h4>
+                        <p>Ngày hội khoa học là chương trình nhằm phát huy kỹ năng sáng tạo của trẻ, đồng thời nâng cao hiệu quả phương pháp STEAM trong giảng dạy mầm non.</p>
+                    </div>
+                    <button id="readmore">
+                        Đọc thêm
+                        <div class="readmore-img">
+                            <img src="./assets/Image/NewsPage/icon-right-arrow.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+       
+
+    </section>
+
+    <div class="footer-mobile" id="footer-mobile">
+        <a href="./index.html">
+            <div class="active-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <g clip-path="url(#clip0_1025_8144)">
+                    <path d="M23.8529 10.4388C23.8524 10.4383 23.8518 10.4377 23.8513 10.4372L14.0612 0.647461C13.6439 0.22998 13.0891 0 12.4989 0C11.9088 0 11.354 0.229797 10.9365 0.647278L1.15151 10.4321C1.14822 10.4354 1.14492 10.4388 1.14163 10.4421C0.284693 11.304 0.286157 12.7024 1.14584 13.5621C1.5386 13.955 2.05734 14.1826 2.61196 14.2064C2.63449 14.2086 2.65719 14.2097 2.68008 14.2097H3.07028V21.4144C3.07028 22.84 4.23025 24 5.65627 24H9.48647C9.87466 24 10.1896 23.6852 10.1896 23.2969V17.6484C10.1896 16.9979 10.7188 16.4687 11.3693 16.4687H13.6285C14.2791 16.4687 14.8083 16.9979 14.8083 17.6484V23.2969C14.8083 23.6852 15.123 24 15.5114 24H19.3416C20.7676 24 21.9276 22.84 21.9276 21.4144V14.2097H22.2894C22.8794 14.2097 23.4342 13.9799 23.8518 13.5624C24.7124 12.7013 24.7128 11.3005 23.8529 10.4388Z" fill="black"></path>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1025_8144">
+                    <rect width="24" height="24" fill="white" transform="translate(0.5)"></rect>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>Trang chủ</span>
+            </div>
+        </a>
+        <a href="./admission.html?tab=tab1">
+            <div class="active-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <g clip-path="url(#clip0_1025_8148)">
+                    <path d="M24.3816 8.31165C24.3153 8.28286 22.6992 7.58275 13.131 3.43639C12.9406 3.35389 12.725 3.35389 12.5347 3.43639L1.28408 8.31165C0.680397 8.57271 0.68621 9.42963 1.28408 9.68797C3.4697 10.6349 7.04275 12.1834 12.5347 14.5632C12.7239 14.6453 12.9395 14.6462 13.131 14.5632C13.6525 14.3372 20.7584 11.2579 21.0833 11.1173V19.1043C21.0833 19.5083 21.3939 19.8558 21.7974 19.8745C22.2281 19.8946 22.5833 19.5516 22.5833 19.1253V10.8452C22.5833 10.7274 22.496 10.6279 22.3791 10.6128C20.9714 10.4314 14.3321 9.57448 12.7367 9.36873C12.2753 9.31107 11.9877 8.8438 12.109 8.4279C12.2042 8.07665 12.5377 7.8529 12.8755 7.87615C12.9091 7.87812 23.5978 9.25745 23.5901 9.25646C23.7898 9.28215 23.954 9.41003 24.0328 9.58343C24.088 9.70466 24.2283 9.76021 24.3489 9.70367C24.5507 9.60907 24.7257 9.48457 24.8053 9.20279C24.9078 8.83766 24.7226 8.45912 24.3816 8.31165Z" fill="black"></path>
+                    <path d="M11.938 15.9394L5.6601 13.219C5.50531 13.152 5.33252 13.2655 5.33252 13.4341V16.1251C5.33252 18.6485 8.62707 20.6253 12.8329 20.6253C17.0388 20.6253 20.3333 18.6485 20.3333 16.1251V13.4341C20.3333 13.2655 20.1605 13.152 20.0057 13.219L13.7273 15.9394C13.1573 16.1872 12.5086 16.187 11.938 15.9394Z" fill="black"></path>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1025_8148">
+                    <rect width="24" height="24" fill="white" transform="translate(0.833496)"></rect>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>Tuyển sinh</span>
+            </div>
+        </a>
+        <a href="./newpage.html">
+            <div class="active-link active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M11.4165 3.25V14.75H6.1665C4.90673 14.75 3.69854 14.2496 2.80775 13.3588C1.91695 12.468 1.4165 11.2598 1.4165 10V8C1.4165 6.74022 1.91695 5.53204 2.80775 4.64124C3.69854 3.75045 4.90673 3.25 6.1665 3.25H11.4165Z" fill="black"></path>
+                    <path d="M22.1886 0.966946C21.9636 0.805094 21.7034 0.69902 21.4294 0.657467C21.1554 0.615913 20.8754 0.64007 20.6126 0.727946L12.4126 3.45895V14.5409L20.6126 17.2719C20.7908 17.3319 20.9776 17.3623 21.1656 17.3619C21.3954 17.3622 21.6231 17.3172 21.8355 17.2294C22.048 17.1416 22.241 17.0128 22.4036 16.8504C22.5662 16.6879 22.6953 16.4951 22.7833 16.2827C22.8713 16.0704 22.9166 15.8428 22.9166 15.6129V2.38695C22.9164 2.10951 22.8503 1.83608 22.7238 1.5892C22.5972 1.34231 22.4138 1.12904 22.1886 0.966946Z" fill="black"></path>
+                    <path d="M12.5667 21.53C12.1996 21.9991 11.7081 22.3558 11.1483 22.5592C10.5884 22.7627 9.98265 22.8048 9.40002 22.6807C8.81739 22.5567 8.28131 22.2715 7.85286 21.8577C7.42441 21.4438 7.12081 20.918 6.97666 20.34L5.82666 15.73C5.93919 15.7466 6.05296 15.7533 6.16666 15.75H12.3767L13.1367 18.8C13.2554 19.2684 13.2658 19.7578 13.167 20.2308C13.0682 20.7039 12.8629 21.1482 12.5667 21.53Z" fill="black"></path>
+                </svg>
+                <span>Tin tức</span>
+            </div>
+        </a>
+        <a href="./gallery.html">
+            <div class="active-link ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M18.5 1.25H6.5C5.24055 1.25106 4.03298 1.75184 3.14241 2.64241C2.25184 3.53298 1.75106 4.74055 1.75 6V18C1.75106 19.2595 2.25184 20.467 3.14241 21.3576C4.03298 22.2482 5.24055 22.7489 6.5 22.75H18.5C19.7595 22.7489 20.967 22.2482 21.8576 21.3576C22.7482 20.467 23.2489 19.2595 23.25 18V6C23.2489 4.74055 22.7482 3.53298 21.8576 2.64241C20.967 1.75184 19.7595 1.25106 18.5 1.25ZM21.75 18C21.7484 18.8615 21.4055 19.6872 20.7963 20.2963C20.1872 20.9055 19.3615 21.2484 18.5 21.25H6.5C5.63853 21.2484 4.8128 20.9055 4.20365 20.2963C3.59451 19.6872 3.25159 18.8615 3.25 18V6C3.25159 5.13853 3.59451 4.3128 4.20365 3.70365C4.8128 3.09451 5.63853 2.75159 6.5 2.75H18.5C19.3615 2.75159 20.1872 3.09451 20.7963 3.70365C21.4055 4.3128 21.7484 5.13853 21.75 6V18Z" fill="black"></path>
+                    <path d="M16.5 9.75C18.0188 9.75 19.25 8.51878 19.25 7C19.25 5.48122 18.0188 4.25 16.5 4.25C14.9812 4.25 13.75 5.48122 13.75 7C13.75 8.51878 14.9812 9.75 16.5 9.75Z" fill="black"></path>
+                    <path d="M17.25 22.0001C17.2525 22.2536 17.2189 22.5061 17.15 22.7501H6.5C5.24055 22.749 4.03298 22.2483 3.14241 21.3577C2.25184 20.4671 1.75106 19.2596 1.75 18.0001V12.3601C2.23259 12.1191 2.7343 11.9184 3.25 11.7601C4.7998 11.2701 6.4405 11.1378 8.0488 11.373C9.65709 11.6083 11.1912 12.205 12.5357 13.1183C13.8802 14.0317 15.0002 15.2379 15.8116 16.6463C16.6229 18.0548 17.1044 19.6288 17.22 21.2501C17.24 21.5001 17.25 21.7501 17.25 22.0001Z" fill="black"></path>
+                    <path d="M23.25 15.18V18C23.2489 19.2595 22.7482 20.467 21.8576 21.3576C20.967 22.2482 19.7595 22.749 18.5 22.75H18.17C18.2224 22.5034 18.2492 22.2521 18.25 22C18.25 21.72 18.24 21.45 18.22 21.18C18.0619 18.8462 17.2008 16.6149 15.75 14.78C16.7979 14.4302 17.8953 14.2512 19 14.25C19.9298 14.2486 20.8554 14.3765 21.75 14.63C22.2659 14.7668 22.768 14.9509 23.25 15.18Z" fill="black"></path>
+                    </svg>
+                <span>Thư viện ảnh</span>
+            </div>
+        </a>
+    </div>
+    <footer id="footer" class="footer">
+        <div class="footer-box">
+            <div class="footer-box__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d805.8944700876772!2d108.23025413429434!3d16.091324917482318!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219fc071dfe27%3A0xf244316bccc5e92!2zVHLGsOG7nW5nIE3huqdtIG5vbiBXb25kZXJsYW5k!5e0!3m2!1svi!2sus!4v1693966862871!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h5>ĐĂNG KÝ NHẬN THÔNG TIN TƯ VẤN</h5>
+            <form action="" class="footer-box__form">
+                <input type="number" placeholder="Nhập số điện thoại">
+                <button class="footer-form__btn">Gửi</button>
+            </form>
+            <div class="footer-box__infor pin">
+                <img src="./assets/Image/HomePage/footer__pin.svg" alt="">
+                <span>Địa chỉ</span>
+                <p>02 Phạm Huy Thông, Nại Hiên Đông,
+                    <br>
+                     Sơn Trà, Đà Nẵng</p>
+            </div>
+            <div class="footer-box__infor">
+                <img src="./assets/Image/HomePage/footer__phonecall.svg" alt="">
+                <span>Hotline</span>
+                <p>0236 2222 589</p>
+            </div>
+            <div class="footer-box__infor">
+                <img src="./assets/Image/HomePage/footer__mail.svg" alt="">
+                <span>Email:</span>
+                <p>contact@wonderland.edu.vn</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>Copyright © 2023 Wonderland Academy ĐN</p>
+        <span></span>
+        <p>All Rights Reserved</p>
+        <button class="copyright-img" href="https://www.facebook.com/TruongMamNonWonderlandDaNang">
+            <img src="./assets/Image/HomePage/copyright-fb.svg" alt="">
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/newpage.js"></script>
+</body>
+</html>

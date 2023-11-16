@@ -1,0 +1,750 @@
+#header{
+    position: fixed;
+}
+#Admissions{
+    width: 100%;
+    min-height: 100vh;
+    .Admissions-class{
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+        .Admissions-class-banner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            width: 100%;
+            background-color: hsl(51, 96%, 89%);
+            padding: 10rem 5% 4rem 5%;
+            position: relative;
+            z-index: 1000;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 90%;
+                height: 91.1rem;
+                top: 0;
+                left: 50%;
+                z-index: -1;
+                transform: translateX(-50%);
+                background-color: hsl(0, 0%, 100%);
+                border-radius: 42.5rem;
+            }
+            .banner-title{
+                max-width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2{
+                    font-size: 4rem;
+                    font-weight: 700;
+                    position: relative;
+                    
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        height: 50%;
+                        width: 100%;
+                        z-index: -1;
+                        background-color: #fbbd13;
+                    }
+                }
+                img{
+                    width: 80%;
+                    object-fit: cover;
+                }
+            }
+            .banner-chart{
+                max-width: 30%;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                    object-fit: cover;
+
+                }
+            }
+        }
+        .Admissions-class-content{
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 2rem 0;
+            .content-box{
+                width: 100%;
+                max-width: 60%;
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                
+                h3{
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+                .box-item{
+                    max-width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 6rem;
+                    background-color: hsl(51, 96%, 89%);
+                    border-top-right-radius: 4rem;
+                    border-bottom-right-radius: 4rem;
+                    .box-item__img{
+                        max-width: 50%;
+                        height: 37rem;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .box-item__text{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        h4{
+                            font-size: 2.4rem;
+                            font-weight: 700;
+                        }
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                            padding-left: 2rem;
+                            li{
+                                span{
+                                    color: red;
+                                }
+                            }
+                        }
+                        >.box-item__support{
+                            width: 100%;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            .support-btn{
+                                max-width: 20rem;
+                                background-color: #FBBD13;
+                                display: flex;
+                                align-items: center;
+                                border: none;
+                                padding: 1rem; 
+                                border-radius: 2rem;
+                                color: #000;
+                                cursor: pointer;
+                                font-weight: 700;
+                                font-size: 1.6rem;
+                                gap: .5rem;
+                                img{
+                                    width: 2rem;
+                                    height: 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .text-other{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+                    padding: 2rem 0; 
+                    p{
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        span{
+                            color: red;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .Admissions-tuition{
+        padding: 18rem 5rem 5rem 5rem;
+        display: none;
+        .aside{
+            max-width: 15%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            h2{
+                font-weight: 600;
+                font-size: 2.4rem;
+            }
+        }
+        .banner-mobile{
+            display: none;
+        }
+        .content{
+            padding: 0 6rem;
+            max-width: 80%;
+            gap: 3rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
+            .content-title{
+                width: 100%;
+                border-bottom: 1px solid #fbbd13;
+                padding-bottom: 1rem;
+            }
+            .content-img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                gap: 3rem;
+                .box-img{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    gap: 3rem;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    span{
+                        font-size: 2.4rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .flex-content{
+                border: 2px #000 solid;
+                max-width: 100%;
+                width: 100%;
+                text-align: center;
+                border-collapse: collapse;
+                tbody{
+                    width: 100%;
+                    max-width: 100%;
+
+                    tr{
+                        border: 2px #000 solid;
+                        th{
+                            background-color: #fbbd13;
+                            padding: 2rem ;
+                        }
+                        th,
+                        td{
+                            border: 1px #000 solid;
+                            text-align: center;
+                            font-size: 2rem;
+                            font-weight: 400;
+                        }
+                        td{                                
+                            padding: 2rem 0;
+                        }
+                    }
+                }
+
+            }
+            .more-content{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+                .more-content__title{
+                    width: 100%;
+                    background-color: #ffe9ab;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem;
+                    cursor: pointer;
+                    span{
+                        font-size: 2rem;
+                        font-weight: 500;
+                    }
+                    svg{
+                        transform: rotate(90deg);
+                    }
+                    .active{
+                        transform: rotate(270deg);
+                    }
+                }
+                .more-content__table{
+                    display: none;
+                    width: 100%;
+                    table{
+                        border-collapse: collapse;
+                        width: 100%;
+                        tr{
+                            th{
+                                background-color: #fbbd13;
+                            }
+                            
+                        }
+                    }
+                    table,
+                    th,
+                    td{
+                        border: 2px solid #000;
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: 400;
+                        padding: 2rem;
+
+                    }
+                }
+                .active{
+                    display: flex;
+                }
+            }
+            .registration-form {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #EBEBEB;
+                padding: 2rem;
+                max-width: 100%;
+                width: 100%;
+                gap: 2rem;
+                h4{
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+                .form {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    z-index: 1;
+                    .form-input{
+                        position: relative;
+                        width: 100%;
+                        height: 6rem;
+                        input{
+                            height: 100%;
+                            padding: 1rem;
+                            border-radius: .6rem;
+                            border: none;
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                            width: 100%;
+                            &:focus {
+                                outline: 1px solid #FBBD13;
+                                transform: scaleY(1.2);
+                                transition: all 0.3s ease-in-out;
+        
+                            }
+                            &:not(:focus):valid ~ .placeholder{
+                                pointer-events: none;
+                                top: 2rem;
+                                left: 1rem;
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                position: absolute;
+                            }  
+                        }
+                        .placeholder {
+                            position: absolute;
+                            top: .2rem;
+                            left: 1rem;
+                            font-size: 1.2rem;
+                            opacity: 1;
+                            color: #BBBBBB;
+                            transition: all 0.2s  ease-in-out;
+                            border-radius: .6rem;
+                            span{
+                                color: #EC453C;
+                            }
+                        }
+        
+                    }
+                }
+                    .form-btn{
+                        width: 14rem;
+                        height: 4.4rem;
+                        border: none;
+                        padding: 1rem;
+                        background-color: #FBBD13;
+                        border-radius: .8rem;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: #EC453C;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+            }
+            .admissions-faq{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #EBEBEB;
+                padding: 2rem;
+                max-width: 100%;
+                width: 100%;
+                gap: 2rem;
+                h4{
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+
+                .admissions-faq__item{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .faq-content{
+                        display: none;
+                        padding: 1rem 2rem 0 1.5rem;
+                        gap: 1.5rem;
+                        ul{
+                            padding-left: 2rem;
+                            display: flex;
+                            gap: .5rem;
+                            flex-direction: column;
+                        }
+                    }
+                    .faq-title{
+                        display: flex;
+                        justify-content: space-between;
+                        background: #fff;
+                        padding: .8rem 1.6rem;
+                        max-width: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                        svg{
+                            transform: rotate(90deg);
+                        }
+                        .active{
+                            transform: rotate(270deg);
+                        }
+                    }
+                    .active{
+                        display: flex;
+                        flex-direction: column;
+
+                    }
+                }
+            }
+        }
+    }
+    .Admissions-news{
+        display: none;
+
+    }
+    .active{
+        display: flex;
+    }
+
+}
+
+
+@media (max-width: 1440px){
+    html{
+        font-size: 60%;
+    }
+    #Admissions{
+        .Admissions-class{
+            .Admissions-class-banner{
+                .banner-title{
+                    h2{
+                        font-size: 3.9rem;
+                    }
+                }
+            }
+        }
+        .Admissions-tuition{
+
+            .content {
+                max-width: 85%;
+            }
+        } 
+    }
+}
+
+@media (max-width: 1250px){
+    html{
+        font-size: 58.5%;
+    }
+    #Admissions{
+        .Admissions-class{
+            .Admissions-class-banner{
+                .banner-title{
+                    h2{
+                        font-size: 3.9rem;
+                    }
+                }
+            }
+        }
+        .Admissions-tuition{
+            padding: 18rem 4% 5rem 4%;
+
+            .content {
+                max-width: 85%;
+            }
+        } 
+    }
+}
+
+@media (max-width: 1024px){
+    html{
+        font-size: 55%;
+    }
+    #Admissions{
+        .Admissions-class{
+            .Admissions-class-banner{
+                .banner-title{
+                    max-width: 35%;
+                    h2{
+                        font-size: 3.2rem;
+                    }
+                }
+            }
+            .Admissions-class-content{
+                .content-box{
+                    max-width: 75%;
+                    .box-item{
+                        gap: 4rem;
+                        .box-item__img{
+                            height: 30rem;
+                        }
+                    }
+                    .text-other{
+                        gap: 2rem;
+                        padding: 1rem 0;
+                    }
+                }
+            }      
+        }
+        .Admissions-tuition{
+            .aside{
+                justify-content: flex-start;
+            }
+            .content {
+                max-width: 85%;
+                padding: 0 ;
+                gap: 2rem;
+                .flex-content{
+                    tbody{
+                        tr{
+                            th,
+                            td{
+                                padding: 1rem;
+                            }
+
+                        }
+                    }
+                    .more-content__table{
+                        table{
+                            tbody{
+                            }
+                        }
+                    }
+                }
+                .more-content{
+                    .more-content__table{
+                        table{
+                            th,
+                            td{
+                                padding: 1rem;
+                            }
+                        }
+                    }
+                }
+                .content-img {
+                    gap: 2rem;
+                    .box-img{
+                        gap: 2rem;
+                    }
+
+                }
+
+                
+            }
+        } 
+    }
+    
+}
+@media (max-width: 991px){
+    html{
+        font-size: 53%;
+    }
+}
+@media (max-width: 768px){
+    html{
+        font-size: 51%;
+    }
+    #Admissions{
+        .Admissions-class{
+            .Admissions-class-banner{
+                padding-top: 12rem;
+                &::before{
+                    width: 100%;
+                    height: 75rem;
+                }
+                .banner-title{
+                    max-width: 40%;
+                    h2{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+            .Admissions-class-content{
+                .content-box{
+                    max-width: 80%;
+                    .box-item{
+                        .box-item__img{
+                        }
+                    }
+                    .text-other{
+                    }
+                }
+            }
+        }
+        .Admissions-tuition{
+            .content{
+                .admissions-faq{
+                    gap: 1.5rem;
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width: 450px) {
+    html{
+        font-size: 49.5%;
+    }
+    #Admissions{
+        .Admissions-class{
+            .Admissions-class-banner{
+                padding: 10rem 3% 2rem 3%;
+                flex-direction: column;
+                background-color: #fff;
+                &::before{
+                    display: none;
+                }
+                .banner-title{
+                    max-width: 100%;
+                    width: 100%;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    h2{
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    img{
+                        display: none;
+                    }
+                }
+                .banner-chart{
+                    max-width: 95%;
+                }
+            }
+            .Admissions-class-content{
+                .content-box{
+                    max-width: 90%;
+                    .box-item{
+                        padding: 1.5rem;
+                        flex-direction: column;
+                        gap: 2rem;
+                        border-radius: 1rem;
+                        align-items: flex-start;
+                        .box-item__img{
+                            width: 100%;
+                            max-width: 100%;
+                            height: unset;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    .text-other{
+                    }
+                }
+            }
+        }
+        .Admissions-tuition{
+            padding: 0 ;
+            flex-direction: column;
+            .aside{
+                display: none;
+            }
+            .banner-mobile{
+                display: block;
+                padding-top: 4rem;
+                width: 100%;
+                img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+
+            }
+            .content {
+                max-width: 100%;
+                padding: 1.5rem ;
+                gap: 2rem;
+
+                .flex-content{
+                    tbody{
+                        tr{
+                            th,
+                            td{
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                            }
+
+                        }
+                    }
+                }
+                .more-content{
+                    .more-content__table{
+                        table{
+                            th,
+                            td{
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .more-content__title{
+                        span{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                .content-img {
+                    display: none;
+                    .box-img{
+                        
+                    }
+
+                }
+                .registration-form{
+                    padding: 1rem;
+                }
+
+                
+            }
+        } 
+    }
+}
+@media (max-width: 375px){
+    html{
+        font-size: 40%;
+    }
+}
